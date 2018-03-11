@@ -1,0 +1,131 @@
+@import url("./animate.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Montserrat|Quicksand");
+
+/* Elements */
+html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+    background: whitesmoke;
+    color: #080808;
+}
+
+a {
+	font-family: 'Open Sans';
+	text-decoration: none;
+	color: teal;
+	-webkit-transition: color .5s, opacity .5s;
+	-moz-transition: color .5s, opacity .5s;
+	-o-transition: color .5s, opacity .5s;
+	transition: color .5s, opacity .5s;
+}
+}
+
+h1 {
+	font-family: 'Quicksand';
+}
+
+p {
+	font-size: 1.5em;
+}
+
+td {
+	vertical-align: top;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bigger {
+	font-size: 4em;
+}
+
+.roboto {
+	font-family: 'Roboto';
+}
+
+.montserrat {
+	font-family: 'Montserrat';
+}
+
+.blackdiv {
+	width: auto;
+	height: auto;
+	text-align: center;
+	background: #080808;
+}
+
+.whitediv {
+	margin: 0px;
+	width: auto;
+	height: auto;
+	text-align: center;
+	background: #F5F5F5;
+}
+
+.orangetxt {
+	color: #C16700;
+}
+
+.whitetxt {
+	color: whitesmoke;
+}
+
+.tealtxt {
+	color: teal;
+}
+
+.sixty {
+	margin-left: 20%;
+	width: 60%;
+	text-align: center;
+}
+
+.clippy {
+	-webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+ 	clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+}
+
+.trap {
+	-webkit-clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+ 	clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+}
+
+.revtrap {
+	-webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+ 	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+}
+
+.revclippy {
+	-webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+ 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
+
+#intro {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+ 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+	z-index: -1;
+}
+
+#rest {
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+	background: whitesmoke;
+}
+
+#second {
+	-webkit-clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+ 	clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+}

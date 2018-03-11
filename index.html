@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>dweslynch</title>
+        <link rel='stylesheet' href="./css/style.css" />
+        <link rel='stylesheet' href="./css/animate.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    </head>
+    <body>
+        <!--
+        <div style="width:100%;height:100%;display:table;">
+            <div class="sect blackbg">
+                <h1 class="intro animated fadeInDown">Devin Lynch</h1><br/>
+                <a href="./login.html" class='EntryButton'>Sign In</a><br/>
+                <a href="./createaccount.html" class='EntryButton'>Create Account</a>
+            </div>
+        </div>
+        -->
+        <div class='blackdiv' id='intro'>
+            <h1 class="bigger whitetxt animated fadeInDown"><br/><br/>Devin Lynch</h1>
+            <h1 class="italic orangetxt montserrat animated fadeInUp">Charlotte &rarr; Iowa City<br/><br/><br/><br/></h1>
+        </div>
+        <div id='rest'>
+            <div class="whitediv">
+                <h1><br/><br/>About</h1>
+                <p class='sixty'>I'm a student at the University of Iowa studying Communications and Political Science.<br/>I try to stay active on at least one programming side-project at any given time.<br/><br/><br/>
+            </div>
+            <div class='revtrap blackdiv'>
+                <h1 class="orangetxt montserrat"><br/><br/><br/>Projects</h1>
+                <table>
+                    <tr>
+                        <td style="width:33%;padding:5%;">
+                            <h2 class='tealtxt'>Nyte</h2>
+                            <p class='whitetxt'>A web app for students organizations at high schools and universities to advertise events
+                                <br/><br/><a href="https://github.com/dweslynch/Nyte">View on GitHub</a>
+                                <br/><a href="http://dweslynch.github.io/Nyte">Launch</a>
+                            </p>
+                        </td>
+                        <td style="width:33%;padding:5%;">
+                            <h2 class='tealtxt'>MarkovNextGen</h2>
+                            <p class='whitetxt'>An lightning-fast .NET library for generating simple markov chains
+                                <br/><br/><a href="https://github.com/dweslynch/MarkovNextGen">View on GitHub</a>
+                                <br/><a href="https://www.nuget.org/packages/MarkovNextGen/">View version 1.0.2 on NuGet</a>
+                            </p>
+                        </td>
+                        <td style="width:33%;padding:5%;">
+                            <h2 class='tealtxt'>Monika</h2>
+                            <p class='whitetxt'>Co-operative project with Jahrbuch
+                                <br/><br/><a href="https://github.com/Jahrbuch/MONI">View on GitHub</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <br/><br/><br/>
+            </div>
+            <div class='whitediv'>
+                <h1>Contact</h1>
+                <p class='sixty'>
+                    dweslynch@gmail.com
+                    <br/><a href="https://github.com/dweslynch">View my GitHub</a>
+                </p>
+                <br/><br/><br/><br/>
+            </div>
+        </div>
+
+        <script>
+            $("#rest").css("margin-top", $("#intro").css("height"));
+            $('a').hover(function() {
+                $(this).css('color', '#C16700');
+            });
+            $('a').mouseout(function() {
+                $(this).css('color', 'teal');
+            });
+        </script>
+    </body>
+</html>
