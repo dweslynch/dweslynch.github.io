@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>dweslynch</title>
+        <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Montserrat|Quicksand">
         <link rel='stylesheet' href="./css/style.css" />
         <link rel='stylesheet' href="./css/animate.css" />
         <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -112,7 +113,7 @@
         </div>
 
         <script>
-            $("#rest").css("margin-top", $("#intro").css("height"));
+            // $("#rest").css("margin-top", $("#intro").css("height"));
             $('a').hover(function() {
                 $(this).css('color', '#C16700');
             });
@@ -121,4 +122,9 @@
             });
         </script>
     </body>
+    <script>
+        $("body").load(function() {
+            $("#rest").css("margin-top", $("#intro").css("height"));
+        });
+    </script>
 </html>
