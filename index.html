@@ -112,6 +112,9 @@
             </div>
         </div>
         <script>
+            $(document).ready(function() {
+                $("#rest").css("margin-top", $("#intro").css("height"));
+            });
             $("#rest").css("margin-top", $("#intro").css("height"));
             $('a').hover(function() {
                 $(this).css('color', '#C16700');
@@ -121,12 +124,12 @@
             });
         </script>
     </body>
-    <script>
+    <!-- script>
         window.onload = function() {
             if(!window.location.hash) {
                 window.location = window.location + '#loaded';
                 window.location.reload();
             }
         }
-    </script>
+    </script -->
 </html>
