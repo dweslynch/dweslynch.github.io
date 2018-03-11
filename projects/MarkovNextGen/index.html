@@ -1,0 +1,204 @@
+<html>
+	<head>
+		<title>MarkovNextGen</title>
+        <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Montserrat|Quicksand">
+        <link rel='stylesheet' href="./css/style.css" />
+        <link rel='stylesheet' href="../../css/animate.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body>
+		<div class='blackdiv' id='intro'>
+			<h1 class="bigger whitetxt">MarkovNextGen</h1>
+			<h1 class='montserrat'><a target='_blank' href="https://github.com/dweslynch/MarkovNextGen">View on GitHub</a></h1>
+			<h1 class='montserrat'><a target='_blank' href="https://www.nuget.org/packages/MarkovNextGen/">Download version 1.0.2 from NuGet</a></h1>
+		</div>
+		<div class='whitediv' id='rest'>
+			<h2><br/><br/>MarkovNextGen is a small .NET library for lightning-fast generation of simple markov chains<br/><br/></h2>
+			<div class='sixty'>
+				<div class='left'>
+					<h2>Modules:<br/><br/></h2>
+					<button class="accordion">class <span class='orangetxt'>Link</span></button>
+					<div class="darkpanel">
+						<p>The underlying class used in the Markov chain.  Paired with a dictionary key corresponding to a word, the Link class holds a list of words that come after it.  This class is usually not accessed directly.</p>
+						<button class='accordion'>Constructors:</button>
+						<div class='darkpanel'>
+							<br/>
+							<p class='darkcode'>new Link(<span class='tealtxt'>IEnumerable&lt;string&gt;</span>)</p>
+							<p>Creates a new link from a list of words</p>
+							<br/>
+							<p class='darkcode'>new Link(<span class='tealtxt'>string list</span>)</p>
+							<p>Creates a new link from a native F# list</p>
+							<br/>
+							<p class='darkcode'>new Link(<span class='tealtxt'>string</span>)</p>
+							<p>Creates a new link containing just one word</p>
+							<br/>
+							<p class='darkcode'>new Link()</p>
+							<p>Creates an empty link</p>
+						</div>
+						<button class='accordion'>Properties:</button>
+						<div class='darkpanel'>
+							<br/>
+							<p class='darkcode'>After : <span class='tealtxt'>string list</span></p>
+							<p>Native F# list type, gets or sets the internal word list</p>
+							<br/>
+							<p class='darkcode'>RandomAfter : <span class='tealtxt'>string</span></p>
+							<p>A read-only string, gets a random string from the internal word list.  Used by the Markov generator to get a frequency-weighted word from the Link</p>
+						</div>
+						<button class='accordion'>Methods:</button>
+						<div class='darkpanel'>
+							<br/>
+							<p class='darkcode'>AddAfter(<span class='tealtxt'>string list</span>)</p>
+							<p>Takes a native F# list type and appends it to the internal word list</p>
+							<br/>
+							<p class='darkcode'>AddAfter(<span class='tealtxt'>IEnumerable&lt;string&gt;</span>)</p>
+							<p>Takes an IEnumerable such as a .NET List and adds it to the internal word list</p>
+							<br/>
+							<p class='darkcode'>AddAfter(<span class='tealtxt'>string</span>)</p>
+							<p>Takes a string and adds it to the word list</p>
+						</div>
+					</div>
+					<button class="accordion">class <span style="color:#C16700;">Markov</span></button>
+					<div class="darkpanel">
+						<p>The primary class in the library.  Creates a file that allows the markov chain to be restored later.  Controls training input and chain generation</p>
+						<button class='accordion'>Constructors:</button>
+						<div class='darkpanel'>
+							<br/>
+							<p class='darkcode'>new Markov(<span class='tealtxt'>string</span>)</p>
+							<p>Initializes a new Markov generator using the specified filename</p>
+							<br/>
+							<p class='darkcode'>new Markov()</p>
+							<p>Creates a new Markov generator using the default chain file, markov.pdo</p>
+						</div>
+						<button class='accordion'>Properties:</button>
+						<div class='darkpanel'>
+							<br/>
+							<p class='darkcode'>Chain : <span class='tealtxt'>Dictionary&lt;string, Link&gt;</span></p>
+							<p>Read-only accessor for the chain.  Each key in the dictionary is a word with a Link corresponding to possible words that come after it</p>
+						</div>
+						<button class='accordion'>Methods:</button>
+						<div class='darkpanel'>
+							<p>All <span class='darkcode'>LinkToChain</span> and <span class='darkcode'>AddToChain</span>-like methods merge entries under the same word instead of ignoring or overwriting.  Adding the same 'after' word to an entry multiple times is not only possible, but it's how frequency weighting is created.</p>
+							<br/>
+							<p class='darkcode'>AddToChain(<span class='tealtxt'>string</span>, <span class='tealtxt'>IEnumerable&lt;string&gt;</span>)</p>
+							<p>Takes a word and a list of words that come after it and adds it to the chain</p>
+							<br/>
+							<p class='darkcode'>AddToChain(<span class='tealtxt'>string</span>)</p>
+							<p>Trains the generator with a single line of text</p>
+							<br/>
+							<p class='darkcode'>AddToChain(<span class='tealtxt'>IEnumerable&lt;string&gt;</span>)</p>
+							<p>Similar to the above method, but processes a list of strings</p>
+							<br/>
+							<p class='darkcode'>AddToChain(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>)</p>
+							<p>Takes another chain and merges it with the current one</p>
+							<br/>
+							<p class='darkcode'>Dump(<span class='tealtxt'>string</span>)</p>
+							<p>Writes the chain to a different file.  Takes a string containing the file name</p>
+							<br/>
+							<p class='darkcode'>PrintChain()</p>
+							<p>Prints the chain to the console in a legible format</p>
+							<br/>
+							<p class='darkcode'>Generate(<span class='tealtxt'>int</span>, <span class='tealtxt'>string</span>)</p>
+							<p>Generates a 'sentence' based on a specified number of words and a given starting word</p>
+							<br/>
+							<p class='darkcode'>Generate(<span class='tealtxt'>string</span>)</p>
+							<p>Generates a 'sentence' with automatic length and a given starting word</p>
+							<br/>
+							<p class='darkcode'>Generate(<span class='tealtxt'>int</span>)</p>
+							<p>Generates a 'sentence' based on a specified number of words and a random starting word</p>
+							<br/>
+							<p class='darkcode'>Generate()</p>
+							<p>Generates a 'sentence' with automatic length and a random starting word</p>
+						</div>
+					</div>
+					<button class="accordion">static class <span style="color:#C16700;">MarkovUtility</span></button>
+					<div class="darkpanel">
+						<p>This class contains static methods for manipulating chains and PDO files without modifying chains passed as arguments.  Due to their static-ness, they don't have some of the optimizations that allow the Markov class to run as fast as it does.  It's therefore recommended to use instances of the Markov class whenever possible.</p>
+						<br/>
+						<p class='darkcode'>ReadChain(<span class='tealtxt'>string</span>)</p>
+						<p>Takes a filename and returns a <span class='darkcode'>Dictionary&lt;string, Link&gt;</span> deserialized from the file</p>
+						<br/>
+						<p class='darkcode'>WriteChain(<span class='tealtxt'>string</span>, <span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>)</p>
+						<p>Takes a filename and a chain, serializing the chain to the file</p>
+						<br/>
+						<p class='darkcode'>AddLink(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>, <span class='tealtxt'>string</span>, <span class='tealtxt'>IEnumerable&lt;string&gt;</span>)</p>
+						<p>Takes a chain, a key word, and a list of words that follow, returning a chain containing the new entry</p>
+						<br/>
+						<p class='darkcode'>RemoveLink(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>, <span class='tealtxt'>string</span>)</p>
+						<p>Takes a chain and a key word, returning a chain without the corresponding link</p>
+						<br/>
+						<p class='darkcode'>RemoveAll(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>, <span class='tealtxt'>string</span>)</p>
+						<p>Takes a chain and a word, and returns a chain with all instances of the word removed, ex. to get rid of profanity</p>
+						<br/>
+						<p class='darkcode'>Merge(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>, <span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>)</p>
+						<p>Takes two chains and returns a new chain containing all the entries from both chains</p>
+						<br/>
+						<p class='darkcode'>PrintChain(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>)</p>
+						<p>Takes a chain and prints it to the console in a legible format.  Doesn't suffer a huge performance loss from the Markov class version, but it's a slow method either way since it uses I/O.</p>
+						<br/>
+						<p class='darkcode'>Generate(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>, <span class='tealtxt'>int</span>, <span class='tealtxt'>string</span>)</p>
+						<p>Returns a generated 'sentence' based on a specified number of words and a given starting word</p>
+						<br/>
+						<p class='darkcode'>Generate(<span class='tealtxt'>Dictionary&lt;string, Link&gt;</span>, <span class='tealtxt'>string</span>)</p>
+						<p>Returns a generated 'sentence' with automatic length and a given starting word</p>
+						<br/>
+						<p class='darkcode'>MergeFrom(<span class='tealtxt'>string</span>, <span class='tealtxt'>string</span>)</p>
+						<p>Takes two files names and returns a new chain created by merging the chain files</p>
+						<br/>
+						<p class='darkcode'>MergeTo(<span class='tealtxt'>string</span>, <span class='tealtxt'>string</span>)</p>
+						<p>Takes two file names and merges the first one into the second</p>
+					</div>
+					<br/><br/>
+					<h2>Usage:<br/><br/></h2>
+					<p class='darkcode' style="background:#444444;padding:10px;">
+						<span class='comment'>// C#</span><br/>
+						<span class='tealtxt'>using</span> MarkovNextGen;<br/>
+						<span class='tealtxt'>using</span> System.IO;<br/>
+						<span class='tealtxt'>using</span> System.Linq;<br/>
+						<span class='tealtxt'>var</span> mkv = <span class='tealtxt'>new</span> Markov(<span class='orangetxt'>"filename.pdo"</span>);<br/>
+						mkv.AddToChain(<span class='orangetxt'>"a quick brown fox jumps over a lazy dog"</span>);<br/>
+						mkv.Generate(<span class='orangetxt'>5</span>); // Generate a 5-word sentence with a random starting word<br/><br/>
+
+						<span class='comment'>// Can also train with whole text files<br/>
+						// This works best when each shift in a sentence is marked by a line break<br/>
+						// For example, don't put "I don't know, maybe italian food" on one line<br/>
+						// Because then the generator thinks that "maybe" can come after "know"<br/>
+						// Instead, replace the comma with a line break</span><br/>
+						<span class='tealtxt'>var</span> contents = File.ReadAllText(<span class='orangetxt'>"input.txt"</span>);<br/>
+						<span class='tealtxt'>var</span> lines = contents.Split(<span class='orangetxt'>' '</span>).ToList();<br/>
+						mvk.AddToChain(lines);<br/><br/>
+
+						<span class='comment'>// You can use MarkovNextGen with any .NET language<br/>
+						// In fact, the library was written in F#</span><br/>
+						<span class='tealtxt'>open</span> MarkovNextGen<br/>
+						<span class='tealtxt'>let</span> mkv = Markov <span class='orangetxt'>"filename.pdo"</span><br/>
+						mkv.AddToChain <span class='orangetxt'>"a quick brown fox jumps over a lazy dog"</span><br/>
+						mvk.Generate 5<br/>
+					</p>
+					<br/><br/>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+                $("#rest").css("margin-top", $("#intro").css("height"));
+                $(".accordion").click(function() {
+                	if ($(this).hasClass("activeaccordion")) {
+                		$(this).removeClass("activeaccordion");
+                		$(this).next().hide();
+                	} else {
+                		$(this).addClass("activeaccordion");
+                		$(this).next().show();
+                	}
+                });
+            });
+            //$("#rest").css("margin-top", $("#intro").css("height"));
+            $('a').hover(function() {
+                $(this).css('color', '#C16700');
+            });
+            $('a').mouseout(function() {
+                $(this).css('color', 'teal');
+            });
+		</script>
+	</body>
+</html>

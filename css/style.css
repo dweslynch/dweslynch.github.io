@@ -24,7 +24,6 @@ a {
 	-o-transition: color .5s, opacity .5s;
 	transition: color .5s, opacity .5s;
 }
-}
 
 h1 {
 	font-family: 'Quicksand';
@@ -51,6 +50,10 @@ td {
 
 .montserrat {
 	font-family: 'Montserrat';
+}
+
+.quicksand {
+	font-family: 'Quicksand';
 }
 
 .blackdiv {

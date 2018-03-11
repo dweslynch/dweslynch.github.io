@@ -4,7 +4,7 @@
         <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Montserrat|Quicksand">
         <link rel='stylesheet' href="./css/style.css" />
         <link rel='stylesheet' href="./css/animate.css" />
-        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     </head>
     <body>
         <!--
@@ -17,7 +17,7 @@
         </div>
         -->
         <div class='blackdiv' id='intro'>
-            <h1 class="bigger whitetxt animated fadeInDown"><br/><br/>Devin Lynch</h1>
+            <h1 class="bigger quicksand whitetxt animated fadeInDown"><br/><br/>Devin Lynch</h1>
             <h1 class="italic orangetxt montserrat animated fadeInUp">Charlotte &rarr; Iowa City<br/><br/><br/><br/></h1>
         </div>
         <div id='rest'>
@@ -26,7 +26,7 @@
                 <p class='sixty'>
                     I'm a student at the University of Iowa studying Communications and Political Science.
                     <br/>I try to stay active on at least one programming side-project at any given time.
-                    <br/><br/>I'm currently a recruitment director for Young Americans for Liberty and an intern with Dr. Christopher Peters' congression campaign in Iowa City.<br/>
+                    <br/><br/>I'm currently a recruitment director for Young Americans for Liberty and an intern with Dr. Christopher Peters' congressional campaign in Iowa City.<br/>
             </div>
             <div class='blackdiv' id='projects'>
                 <h1 class="orangetxt montserrat"><br/><br/><br/>Projects</h1>
@@ -35,21 +35,21 @@
                         <td style="width:33%;padding:5%;">
                             <h2 class='tealtxt'>Nyte</h2>
                             <p class='whitetxt'>A web app for student organizations at high schools and universities to advertise events
-                                <br/><br/><a href="https://github.com/dweslynch/Nyte">View on GitHub</a>
-                                <br/><a href="http://dweslynch.github.io/Nyte">Launch</a>
+                                <br/><br/><a target='_blank' href="https://github.com/dweslynch/Nyte">View on GitHub</a>
+                                <br/><a target='_blank' href="http://dweslynch.github.io/Nyte">Launch</a>
                             </p>
                         </td>
                         <td style="width:33%;padding:5%;">
                             <h2 class='tealtxt'>MarkovNextGen</h2>
                             <p class='whitetxt'>An lightning-fast .NET library for generating simple markov chains
-                                <br/><br/><a href="https://github.com/dweslynch/MarkovNextGen">View on GitHub</a>
-                                <br/><a href="https://www.nuget.org/packages/MarkovNextGen/">View version 1.0.2 on NuGet</a>
+                                <br/><br/><a target='_blank' href="https://github.com/dweslynch/MarkovNextGen">View on GitHub</a>
+                                <br/><a target='_blank' href="https://www.nuget.org/packages/MarkovNextGen/">View version 1.0.2 on NuGet</a>
                             </p>
                         </td>
                         <td style="width:33%;padding:5%;">
                             <h2 class='tealtxt'>Monika</h2>
-                            <p class='whitetxt'>Co-operative project with <a href="https://github.com/Jahrbuch">Jahrbuch</a>
-                                <br/><br/><a href="https://github.com/Jahrbuch/MONI">View on GitHub</a>
+                            <p class='whitetxt'>Co-operative project with <a target='_blank' href="https://github.com/Jahrbuch">Jahrbuch</a>
+                                <br/><br/><a target='_blank' href="https://github.com/Jahrbuch/MONI">View on GitHub</a>
                             </p>
                         </td>
                     </tr>
@@ -106,7 +106,7 @@
                 <p class='whitetxt sixty'>
                     dweslynch@gmail.com
                     <br/>devin-lynch@uiowa.edu
-                    <br/><a href="https://github.com/dweslynch">View my GitHub</a>
+                    <br/><a target='_blank' href="https://github.com/dweslynch">View my GitHub</a>
                 </p>
                 <br/><br/><br/>
             </div>
@@ -115,7 +115,7 @@
             $(document).ready(function() {
                 $("#rest").css("margin-top", $("#intro").css("height"));
             });
-            $("#rest").css("margin-top", $("#intro").css("height"));
+            //$("#rest").css("margin-top", $("#intro").css("height")); // Testing commmenting out
             $('a').hover(function() {
                 $(this).css('color', '#C16700');
             });
