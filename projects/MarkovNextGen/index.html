@@ -166,7 +166,7 @@
 						// Instead, replace the comma with a line break</span><br/>
 						<span class='tealtxt'>var</span> contents = File.ReadAllText(<span class='orangetxt'>"input.txt"</span>);<br/>
 						<span class='tealtxt'>var</span> lines = contents.Split(<span class='orangetxt'>' '</span>).ToList();<br/>
-						mvk.AddToChain(lines);<br/><br/>
+						<span class='tealtxt'>var</span> res = mvk.AddToChain(lines);<br/><br/>
 					</p>
 					<br/>
 					<p>F#</p>
@@ -176,7 +176,7 @@
 						<span class='tealtxt'>open</span> MarkovNextGen<br/>
 						<span class='tealtxt'>let</span> mkv = Markov <span class='orangetxt'>"filename.pdo"</span><br/>
 						mkv.AddToChain <span class='orangetxt'>"a quick brown fox jumps over a lazy dog"</span><br/>
-						mvk.Generate 5<br/>
+						<span class='tealtxt'>let</span> res = mvk.Generate 5<br/>
 					</p>
 					<br/><br/>
 				</div>
