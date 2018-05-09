@@ -11,7 +11,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans';
-    background: whitesmoke;
+    /* background: whitesmoke; */
+    background: #080808;
     color: #080808;
 }
 
@@ -108,13 +109,18 @@ td {
  	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }
 
+.topclip {
+	-webkit-clip-path: polygon(0 0, 100% 45%, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 45%, 100% 100%, 0 100%);
+}
+
 #intro {
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
- 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+	/* -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+ 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
 	z-index: -1;
 }
 
@@ -124,7 +130,7 @@ td {
 	padding: 0px;
 	/*-webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
  	clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);*/
-	background: whitesmoke;
+ 	background: #080808;
 }
 
 #second {
