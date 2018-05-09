@@ -9,9 +9,9 @@
 
 	<body>
 		<div class='blackdiv' id='intro'>
-			<h1 class="bigger whitetxt">MarkovNextGen</h1>
+			<h1 class="bigger whitetxt animated fadeInDown">MarkovNextGen</h1>
 			<h1 class='montserrat'><a target='_blank' href="https://github.com/dweslynch/MarkovNextGen">View on GitHub</a></h1>
-			<h1 class='montserrat'><a target='_blank' href="https://www.nuget.org/packages/MarkovNextGen/">Download version 1.0.3 from NuGet</a></h1>
+			<h1 class='montserrat'><a target='_blank' href="https://www.nuget.org/packages/MarkovNextGen/">Download version 1.2.6 from NuGet</a></h1>
 		</div>
 		<div class='whitediv' id='rest'>
 			<h2><br/><br/>MarkovNextGen is a small .NET library for lightning-fast generation of simple markov chains<br/><br/></h2>
@@ -20,7 +20,7 @@
 					<h2>Modules:<br/><br/></h2>
 					<button class="accordion">class <span class='orangetxt'>Link</span></button>
 					<div class="darkpanel">
-						<p>The underlying class used in the Markov chain.  Paired with a dictionary key corresponding to a word, the Link class holds a list of words that come after it.  This class is usually not accessed directly.</p>
+						<p>The underlying class used in the Markov chain.  Paired with a dictionary key corresponding to a word, the Link class holds a list of words that come after it.  This class is usually not accessed directly.  Also has a generic version.</p>
 						<button class='accordion'>Constructors:</button>
 						<div class='darkpanel'>
 							<br/>
@@ -60,7 +60,7 @@
 					</div>
 					<button class="accordion">class <span style="color:#C16700;">Markov</span></button>
 					<div class="darkpanel">
-						<p>The primary class in the library.  Creates a file that allows the markov chain to be restored later.  Controls training input and chain generation</p>
+						<p>The primary class in the library.  Creates a file that allows the markov chain to be restored later.  Controls training input and chain generation.  Also has a generic version with similar methods.</p>
 						<button class='accordion'>Constructors:</button>
 						<div class='darkpanel'>
 							<br/>
@@ -74,7 +74,7 @@
 						<div class='darkpanel'>
 							<br/>
 							<p class='darkcode'>Chain : <span class='tealtxt'>Dictionary&lt;string, Link&gt;</span></p>
-							<p>Read-only accessor for the chain.  Each key in the dictionary is a word with a Link corresponding to possible words that come after it</p>
+							<p>Read-Write accessor for the chain.  Each key in the dictionary is a word with a Link corresponding to possible words that come after it</p>
 						</div>
 						<button class='accordion'>Methods:</button>
 						<div class='darkpanel'>
@@ -157,7 +157,7 @@
 						<span class='tealtxt'>using</span> System.Linq;<br/>
 						<span class='tealtxt'>var</span> mkv = <span class='tealtxt'>new</span> Markov(<span class='orangetxt'>"filename.pdo"</span>);<br/>
 						mkv.AddToChain(<span class='orangetxt'>"a quick brown fox jumps over a lazy dog"</span>);<br/>
-						mkv.Generate(<span class='orangetxt'>5</span>); // Generate a 5-word sentence with a random starting word<br/><br/>
+						<span class='tealtxt'>var</span> result = mkv.Generate(<span class='orangetxt'>5</span>); // Generate a 5-word sentence with a random starting word<br/><br/>
 
 						<span class='comment'>// Can also train with whole text files<br/>
 						// This works best when each shift in a sentence is marked by a line break<br/>
@@ -166,7 +166,7 @@
 						// Instead, replace the comma with a line break</span><br/>
 						<span class='tealtxt'>var</span> contents = File.ReadAllText(<span class='orangetxt'>"input.txt"</span>);<br/>
 						<span class='tealtxt'>var</span> lines = contents.Split(<span class='orangetxt'>' '</span>).ToList();<br/>
-						mvk.AddToChain(lines);<br/><br/>
+						<span class='tealtxt'>var</span> res = mvk.AddToChain(lines);<br/><br/>
 					</p>
 					<br/>
 					<p>F#</p>
@@ -176,7 +176,16 @@
 						<span class='tealtxt'>open</span> MarkovNextGen<br/>
 						<span class='tealtxt'>let</span> mkv = Markov <span class='orangetxt'>"filename.pdo"</span><br/>
 						mkv.AddToChain <span class='orangetxt'>"a quick brown fox jumps over a lazy dog"</span><br/>
-						mvk.Generate 5<br/>
+<<<<<<< HEAD
+						<span class='texltxt'>let</span> result = mvk.Generate 5<br/>
+					</p>
+					<br/><br/>
+					<h2>What the heck is a PDO file?</h2>
+					<p>
+						Well, it started as a joke between a few of my programmer friends, and when <a href="http://github.com/Jahrbuch">Jahrbuch</a> and I were working on <a href="http://github.com/Jahrbuch/MONI">Monika</a>, we decided to store the markov generation data in .pdo files to keep the joke running.  I kept the extension when I extracted the markov code to make MarkovNextGen, but you can use whatever file extension you want.  Since the data is stored in JSON format, .json might make the most sense.
+=======
+						<span class='tealtxt'>let</span> res = mvk.Generate 5<br/>
+>>>>>>> 768cbedd9612fae9227f10f3a5b7c726a7d65019
 					</p>
 					<br/><br/>
 				</div>
