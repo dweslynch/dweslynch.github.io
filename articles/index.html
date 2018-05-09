@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>MarkovNextGen</title>
+        <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Montserrat|Quicksand">
+        <link rel='stylesheet' href="./css/style.css" />
+        <link rel='stylesheet' href="../../css/animate.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body>
+		<div class='blackdiv' id='intro'>
+			<h1 class="bigger whitetxt animated fadeInDown">Articles</h1>
+			<h1 class='italic montserrat goldtxt slightblur'>Print the truth and raise hell</h1>
+		</div>
+		<div class='whitediv' id='rest'>
+			<h2><br/><br/></h2>
+			<div class='sixty'>
+				<div class='left'>
+					<h2 class='quicksand'>Rand Gives Greenlight on Pompeo Nomination<br/></h2>
+					<p>Published in <span class="italic">The Libertarian Republic</span> &mdash; <a>View on TLR</a></p>
+					<br/>
+					<p class='quicksand'>DEVIN LYNCH &mdash; May 5 2018</p>
+					<p>
+						Senator Rand Paul stated last Monday that he supported Mike Pompeo’s nomination as Secretary of State, after meeting with the former CIA Director and securing a statement that he opposes US involvement in Afghanistan and believes the Iraq war was a mistake.  The Kentucky senator is an influential voice for both libertarians and liberal Republicans, and the American presence in Afghanistan is often a key issue for these groups, which generally oppose foreign intervention.  Leading up to Pompeo’s confirmation hearing, Senator Paul was expected to be the deciding vote in his appointment as Secretary of State.
+						<br/><br/><img src="./img/RandPompeo.jpg" style="width:200px;float:right;">
+						A member of the Tea Party movement, Pompeo previously served in the House and later as Director of the CIA.  Generally regarded as a neoconservative, <a href="https://www.hrw.org/news/2018/04/11/i-wont-torture-not-enough-question-pompeo-us-rendition-policy">Pompeo has historically supported the NSA and American involvement in the Middle East</a>.  Senator Paul previously <a href="http://www.foxnews.com/opinion/2018/03/15/sen-rand-paul-why-cant-support-neocons-pompeo-at-state-haspel-at-cia-and-bolton-as-nsa.html">argued against Pompeo’s appointment</a>, saying “the neocons have been so completely and regularly wrong for decades now that it’s almost unimaginable to believe they would ever be in a position to advise a president again – let alone to wield the kind of power they will have if they lead some of our nation’s most powerful institutions,” so many were surprised when the Senator pledged at the last minute to vote “yes” for his confirmation.  However, Senator Paul <a href="https://twitter.com/RandPaul/status/988523697886711808">took to Twitter to defend his decision</a>, stating that he met with President Trump and Pompeo, securing an assurance that “we’re getting the hell out of Afghanistan” and that Trump <a href="https://ivn.us/2018/05/02/rand-paul-donald-trump-says-getting-hell-afghanistan">intends to return to his original campaign pledge of a non-interventionist foreign policy</a>.
+						<br/><br/>
+						As late as April of 2016, Trump promised a departure from the previous two administrations’ interventionist tactics, saying “our moments of greatest strength came when politics ended at the water’s edge,” and  “Instead of trying to spread universal values that not everybody shares or wants, we should understand that strengthening and promoting Western civilization and its accomplishments will do more to inspire positive reforms around the world than military interventions.”  It’s unclear whether the President thinks Pompeo will be instrumental in this reversal despite his past beliefs, or because of them.
+						<br/><br/>
+						As for Rand Paul, Trump seems to have <a href="https://www.cnn.com/2018/04/18/politics/rand-paul-mike-pompeo-nomination/index.html">expected his change of heart from the beginning</a>.  When asked about the Senator’s potential opposition, the President remarked “He’s never let me down … I have a lot of confidence in Rand” and “I have a feeling it’s going to work out very well.”
+						<br/><br/>
+						Pompeo was <a href="https://www.nytimes.com/2018/04/26/us/politics/mike-pompeo-secretary-of-state.html">confirmed as Secretary of State on April 26th by a Senate vote of 57 – 42</a>.
+					</p>
+					<br/>
+					<hr>
+					<br/><br/>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+                $("#rest").css("margin-top", $("#intro").css("height"));
+                $(".accordion").click(function() {
+                	if ($(this).hasClass("activeaccordion")) {
+                		$(this).removeClass("activeaccordion");
+                		$(this).next().hide();
+                	} else {
+                		$(this).addClass("activeaccordion");
+                		$(this).next().show();
+                	}
+                });
+            });
+            //$("#rest").css("margin-top", $("#intro").css("height"));
+            $('a').hover(function() {
+                $(this).css('color', '#C16700');
+            });
+            $('a').mouseout(function() {
+                $(this).css('color', 'teal');
+            });
+		</script>
+	</body>
+</html>

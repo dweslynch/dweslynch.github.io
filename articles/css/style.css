@@ -1,0 +1,158 @@
+/* Elements */
+html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+    background: whitesmoke;
+    color: #080808;
+}
+
+a {
+	font-family: 'Open Sans';
+	text-decoration: none;
+	color: teal;
+	-webkit-transition: color .5s, opacity .5s;
+	-moz-transition: color .5s, opacity .5s;
+	-o-transition: color .5s, opacity .5s;
+	transition: color .5s, opacity .5s;
+}
+
+p {
+    font-size: 1em;
+}
+
+h1 {
+    font-family: 'Quicksand';
+}
+
+.italic {
+    font-style: italic;
+}
+
+.roboto {
+    font-family: 'Roboto';
+}
+
+.montserrat {
+    font-family: 'Montserrat';
+}
+
+.quicksand {
+    font-family: 'Quicksand';
+}
+
+.blackdiv {
+    width: auto;
+    text-align: center;
+    background: #080808;
+}
+
+.whitediv {
+    width: auto;
+    text-align: center;
+    background: #F5F5F5;
+}
+
+.bigger {
+    font-size: 4em;
+}
+
+.left {
+    text-align: left;
+}
+
+.orangetxt {
+    color: #C16700;
+}
+
+.whitetxt {
+    color: whitesmoke;
+}
+
+.tealtxt {
+    color: #009090;
+}
+
+.goldtxt {
+    color: #FFD700;
+}
+
+.slightblur {
+    filter: blur(2px);
+}
+
+.sixty {
+    margin-left: 20%;
+    width: 60%;
+    text-align: center;
+}
+
+#intro {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+/* Accordion */
+.accordion {
+    background-color: #EEEEEE;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:hover {
+    background-color: #CCCCCC;
+    color: #080808;
+}
+
+.activeaccordion {
+    background-color: #505050;
+    color: whitesmoke;
+}
+
+.accordion:after {
+    content: "+"; /* Unicode character for "plus" sign (+) */
+    color: teal;
+    float: right;
+    margin-left: 5px;
+}
+
+.activeaccordion:after {
+    content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+    padding: 0 18px;
+    background: whitesmoke;
+    color: #080808;
+    display: none;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.darkpanel {
+    padding: 0 18px;
+    background: #505050;
+    color: whitesmoke;
+    display: none;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.dispblock {
+    display: block;
+}
