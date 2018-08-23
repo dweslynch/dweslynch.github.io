@@ -94,6 +94,9 @@ h1 {
 }
 
 #intro {
+    width: auto;
+    text-align: center;
+    background: #080808;
     position: fixed;
     top: 0px;
     left: 0px;
