@@ -1,0 +1,144 @@
+@import url("./animate.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+
+/* Elements */
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+}
+
+a {
+	font-family: 'Roboto';
+	text-decoration: none;
+	color: teal;
+}
+
+input[type=text] {
+	padding: 12px;
+	background-color: #303030;
+	color: white;
+	border: none;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	padding: 12px;
+	background-color: teal;
+	color: white;
+	border: none;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+	background-color: #C16700;
+}
+
+select {
+	padding: 12px;
+	background-color: #303030;
+	color: white;
+	border: none;
+}
+
+h2 {
+	color: teal;
+}
+
+p {
+	color: whitesmoke;
+	display: inline-block;
+	font-size: 1.125em;
+}
+
+table {
+	overflow-y: auto;
+	display: table;
+	margin: auto;
+}
+
+td {
+	padding: 12px;
+	border-bottom: 1px solid #080808;
+	color: whitesmoke;
+}
+
+td:last-child {
+	border: none;
+}
+
+/* Classes */
+.intro {
+    color: #C16700;
+    font-family: 'Open Sans';
+    font-size: 4em;
+    margin: 5px;
+    display: inline-block;
+}
+
+.EntryButton {
+	color: teal;
+	font-size: 1em;
+	border: 2px solid teal;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 2px;
+	display: inline-block;
+}
+
+.floater {
+	position: fixed;
+	margin: 0px;
+	padding: 0px;
+	right: 1%;
+	top: 1%;
+}
+
+.floater h2 {
+	margin: 0px;
+	color: teal;
+	text-align: right;
+}
+.floater h2:hover {
+	color: whitesmoke;
+}
+
+.orange {
+	color: #C16700;
+	font-weight: bold;
+}
+
+.conditional {
+	opacity: 0.0;
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	transition: opacity .5s;
+}
+
+.tcontainer {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.tcell {
+	background: #444444;
+	width: auto;
+	height: 100%;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0px;
+}
+
+/* ID's */
+#availability {
+	opacity: 0.0;
+	-webkit-transition: color .5s, opacity .5s;
+	-moz-transition: color .5s, opacity .5s;
+	-o-transition: color .5s, opacity .5s;
+	transition: color .5s, opacity .5s;
+}
