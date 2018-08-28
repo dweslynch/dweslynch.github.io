@@ -88,6 +88,11 @@ td:last-child {
 	display: inline-block;
 }
 
+.EntryButton:hover {
+    color: white;
+    background-color: teal;
+}
+
 .floater {
 	position: fixed;
 	margin: 0px;
