@@ -1,0 +1,88 @@
+html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+    /* background: whitesmoke; */
+    background: #080808;
+    color: #080808;
+}
+
+a {
+	font-family: 'Open Sans';
+	text-decoration: none;
+    color: #4B9CD3;
+	-webkit-transition: color .5s, opacity .5s;
+	-moz-transition: color .5s, opacity .5s;
+	-o-transition: color .5s, opacity .5s;
+	transition: color .5s, opacity .5s;
+}
+
+h1 {
+	font-family: 'Quicksand';
+    font-size: 4em;
+}
+
+p {
+}
+
+td {
+	vertical-align: top;
+}
+
+.top {
+    position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+.white {
+    background: whitesmoke;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.black {
+    background-color: #080808;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.clippy {
+    -webkit-clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 -webkit-calc(100% - 50px));
+    clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 calc(100% - 50px));
+	/* -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+ 	clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); */
+}
+
+.afterclip {
+    margin-top: -100px;
+}
+
+.demargin {
+    margin: 0px;
+}
+
+.cell {
+    width: 33%;
+    padding: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.whitetext {
+    color: whitesmoke;
+}
+
+.carolinatext {
+    color: #4B9CD3;
+}
